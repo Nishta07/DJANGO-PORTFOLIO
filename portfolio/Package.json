@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "portfolio/wsgi.py",
+        "use": "@netlify/python",
+        "config": { "maxLamdaSize": "15mb", "runtime": "python3.12.4"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "portfolio/wsgi.py"
+        }
+    ]
+}
